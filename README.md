@@ -19,3 +19,7 @@ https://docs.moneybutton.com/docs/bsv-address.html
 
 
 ## how to generate mnemonic words?
+
+https://docs.moneybutton.com/docs/bsv-mnemonic.html
+
+https://docs.moneybutton.com/docs/bsv-script.html
