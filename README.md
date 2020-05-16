@@ -13,3 +13,9 @@ https://bsvnodeapi.herokuapp.com/generateaddress/test
 
 
 https://walletgenerator.net/
+
+
+https://docs.moneybutton.com/docs/bsv-address.html
+
+
+## how to generate mnemonic words?
