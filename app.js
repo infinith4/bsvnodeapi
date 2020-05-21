@@ -44,6 +44,36 @@ app.get('/j', (req, res) => {
     res.send('{ "aaaa" : "bbbb" , "aaaa1" : "bbbb" }');
 });
 
+
+app.get('/gen_mnemonic', (req, res) => {
+    jsondata = generate_mnemonic()
+    res.header('Content-Type', 'application/json; charset=utf-8')
+    res.send(jsondata);
+});
+
+
+app.get('/gen_mnemonic/:envname', (req, res) => {
+    envname = req.params.envname
+    jsondata = generate_mnemonic(envname)
+    res.header('Content-Type', 'application/json; charset=utf-8')
+    res.send(jsondata);
+});
+
+//generate mnemonic words
+generate_mnemonic = function(envname){
+    env = "livenet"
+    privname = "xpriv"
+    if(envname == 'test'){
+        env = "testnet"
+        privname = "tprv"
+    }
+    var Mnemonic = require('bitcore-mnemonic');
+    var code = new Mnemonic(Mnemonic.Words.ENGLISH);
+    var xpriv = code.toHDPrivateKey(env);
+    return `{ "mnemonic" : "${code.toString()}" , "${privname}" : "${xpriv}" }`
+}
+
+
 // app.get('/api/courses', (req, res) => {
 //     res.send(courses);
 // });
