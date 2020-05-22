@@ -62,14 +62,14 @@ app.get('/gen_mnemonic/:envname', (req, res) => {
 //generate mnemonic words
 generate_mnemonic = function(envname){
     env = "livenet"
-    privname = "xprv"
+    privname = "xpriv"
     if(envname == 'test'){
         env = "testnet"
         privname = "tprv"
     }
     var Mnemonic = require('bitcore-mnemonic');
     var code = new Mnemonic(Mnemonic.Words.ENGLISH);
-    var xpriv = code.toHDPrivateKey("", env);
+    var xpriv = code.toHDPrivateKey(env);
     return `{ "mnemonic" : "${code.toString()}" , "${privname}" : "${xpriv}" }`
 }
 

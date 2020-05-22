@@ -25,12 +25,9 @@ https://docs.moneybutton.com/docs/bsv-address.html
 https://docs.moneybutton.com/docs/bsv-mnemonic.html
 
 https://docs.moneybutton.com/docs/bsv-script.html
-<<<<<<< HEAD
-=======
 
 
 ## bitcore-mnemonic
 
 https://github.com/moneybutton/bsv-mnemonic
 
->>>>>>> add
