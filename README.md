@@ -9,9 +9,17 @@ npm i bitcore-mnemonic
 node app.js
 ```
 
+### generate address
+
 https://bsvnodeapi.herokuapp.com/generateaddress
 
 https://bsvnodeapi.herokuapp.com/generateaddress/test
+
+### generate mnemonic words
+
+https://bsvnodeapi.herokuapp.com/gen_mnemonic
+
+https://bsvnodeapi.herokuapp.com/gen_mnemonic/test
 
 
 https://walletgenerator.net/
